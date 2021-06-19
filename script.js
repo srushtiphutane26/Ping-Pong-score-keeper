@@ -24,6 +24,8 @@ player1Button.addEventListener('click', function () {
             player2Score.classList.add('loser');
             player1Button.disabled = true;
             player2Button.disabled = true;
+            startit();
+            stopit();
         }
         player1S.textContent = p1Score;         //if we click we add one to the p1score and update it to player1S
     }
@@ -39,6 +41,8 @@ player2Button.addEventListener('click', function () {
             player1Score.classList.add('loser');
             player1Button.disabled = true;
             player2Button.disabled = true;
+            startit();
+            stopit();
         }
         player2S.textContent = p2Score;         //if we click we add one to the p1score and update it to player1S
     }
@@ -66,4 +70,18 @@ function reset() {
     player2Score.classList.remove('has-text-success', 'loser');
     player1Button.disabled = false;
     player2Button.disabled = false;
+}
+
+const startit = () => {
+    setTimeout(function () {
+        console.log("start")
+        confetti.start();
+    }, 1000)
+}
+
+const stopit = () => {
+    setTimeout(function () {
+        console.log("start")
+        confetti.stop();
+    }, 6000)
 }
