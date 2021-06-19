@@ -76,7 +76,7 @@ const startit = () => {
     setTimeout(function () {
         console.log("start")
         confetti.start();
-    }, 1000)
+    }, 5)
 }
 
 const stopit = () => {
