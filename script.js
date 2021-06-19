@@ -83,5 +83,5 @@ const stopit = () => {
     setTimeout(function () {
         console.log("start")
         confetti.stop();
-    }, 6000)
+    }, 4000)
 }
